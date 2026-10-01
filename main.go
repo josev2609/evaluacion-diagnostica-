@@ -5,7 +5,7 @@ import "fmt"
 var productosVendidos []string
 var subtotales []float64
 
-func RegistrarVenta(nombre string, precio float64, cantidad int) {
+func Regisventa(nombre string, precio float64, cantidad int) {
 	subtotal := precio * float64(cantidad)
 
 	productosVendidos = append(productosVendidos, nombre)
@@ -14,8 +14,6 @@ func RegistrarVenta(nombre string, precio float64, cantidad int) {
 
 func MostrarEstadisticas() {
 	if len(subtotales) == 0 {
-		fmt.Println("No hay ventas registradas.")
-		return
 	}
 
 	total := 0.0
@@ -36,7 +34,7 @@ func main() {
 
 	for opcion != 3 {
 
-		fmt.Println("\n1. Registrar venta")
+		fmt.Println("1. Registrar venta")
 		fmt.Println("2. Mostrar estadísticas")
 		fmt.Println("3. Salir")
 		fmt.Print("Opción: ")
@@ -44,7 +42,7 @@ func main() {
 
 		if opcion == 1 {
 
-			fmt.Println("\nProductos:")
+			fmt.Println("Productos:")
 			for i := 0; i < 3; i++ {
 				fmt.Println(i+1, productos[i], "$", precios[i])
 			}
