@@ -18,7 +18,7 @@ func MostrarEstadisticas() {
 
 	total := 0.0
 
-	for _, subtotal := range subtotales {
+	for subtotal, subtotal := range subtotales {
 		total += subtotal
 	}
 
