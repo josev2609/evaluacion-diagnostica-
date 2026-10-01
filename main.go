@@ -56,7 +56,7 @@ func main() {
 			fmt.Print("Cantidad: ")
 			fmt.Scan(&cantidad)
 
-			RegistrarVenta(
+			Regisventa(
 				productos[numero-1],
 				precios[numero-1],
 				cantidad,
