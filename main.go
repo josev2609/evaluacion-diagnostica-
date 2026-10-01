@@ -32,49 +32,6 @@ func main() {
 
 	var opcion int
 
-	for opcion != 3 {
+	for opcion = 3 {
 
-		fmt.Println("1. Registrar venta")
-		fmt.Println("2. Mostrar estadísticas")
-		fmt.Println("3. Salir")
-		fmt.Print("Opción: ")
-		fmt.Scan(&opcion)
-
-		if opcion == 1 {
-
-			fmt.Println("Productos:")
-			for i := 0; i < 3; i++ {
-				fmt.Println(i+1, productos[i], "$", precios[i])
-			}
-
-			var numero int
-			var cantidad int
-
-			fmt.Print("Seleccione producto: ")
-			fmt.Scan(&numero)
-
-			fmt.Print("Cantidad: ")
-			fmt.Scan(&cantidad)
-
-			Regisventa(
-				productos[numero-1],
-				precios[numero-1],
-				cantidad,
-			)
-
-			fmt.Println("Venta registrada.")
-
-		} else if opcion == 2 {
-
-			MostrarEstadisticas()
-
-		} else if opcion == 3 {
-
-			fmt.Println("Programa terminado.")
-
-		} else {
-
-			fmt.Println("Opción incorrecta.")
-		}
 	}
-}
